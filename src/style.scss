@@ -1,0 +1,43 @@
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (max-width: 1023px) { @content ; }
+  }
+  @else if $point == mobile {
+    @media (max-width: 767px) { @content ; }
+  }
+  @else if $point == not_mobile {
+    @media (min-width: 768px) { @content ; }
+  }
+  @else {
+    @media (max-width: $point) { @content ; }
+  }
+}
+
+body {
+  background: #d6f1f3;
+  font-family: "Averta", Arial, sans-serif;
+  font-weight: normal;
+  position: relative;
+  color: #38364d;
+
+  box-sizing:border-box;font-weight:normal;
+  *,*::before,*::after{box-sizing:inherit;margin:0;padding:0;font-weight:inherit;}
+  li{list-style:none;}
+  a{text-decoration:none;}
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto;
+  overflow: hidden;
+
+  @include breakpoint(mobile) {
+    margin: 0 auto;
+  };
+}
+
+.hidden {
+  height: 0;
+}

@@ -1,0 +1,4 @@
+node_modules
+dist/video
+dist/fonts
+.DS_Store
