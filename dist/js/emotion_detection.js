@@ -90,17 +90,16 @@
     if (ctrack.getCurrentPosition()) {
       ctrack.draw(overlay);
     }
-    var vids = document.getElementsByClassName('vid');
+    var smiles = document.getElementsByClassName('smile');
     var cp = ctrack.getCurrentParameters();
     var er = ec.meanPredict(cp);
     if (er) {
       updateData(er);
 
       for (var i = 0;i < er.length;i++) {
-        if (er[3].value < 0.4) {
-          for (var j = 0; j < vids.length; j++) {
-            vids[j].play();
-            console.log();
+        if (er[3].value > 0.4) {
+          for (var j = 0; j < smiles.length; j++) {
+            smiles[j].play();
           }
         }
         if (er[i].value > 0.4) {

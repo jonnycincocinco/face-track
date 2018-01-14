@@ -25,6 +25,22 @@ body {
   @media (max-width: 767px) {
     .main {
       margin: 0 auto; } }
+  .main .content {
+    display: -ms-flexbox;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    width: 1200px;
+    height: 75vh;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .main .content .smile {
+      margin: auto;
+      width: 25%;
+      height: auto; }
 
 .hidden {
   height: 0; }

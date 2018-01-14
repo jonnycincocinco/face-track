@@ -13,6 +13,7 @@
     "serve": "node ./server.js",
     "develop": "run-p watch serve",
     "build": "rm -rf dist && gulp",
-    "postinstall": "gulp"
+    "postinstall": "gulp",
+    "start":"node app.js"
   }
 }

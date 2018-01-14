@@ -36,6 +36,24 @@ body {
   @include breakpoint(mobile) {
     margin: 0 auto;
   };
+
+  .content {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    width: 1200px;
+    height: 75vh;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    .smile {
+      margin: auto;
+      width: 25%;
+      height: auto;
+    }
+  }
+
 }
 
 .hidden {
