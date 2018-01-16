@@ -82,6 +82,17 @@
     drawLoop();
   }
 
+  var smileThreshold = 0.4;
+
+  var clickUp = document.getElementById('up').onclick=function(){
+    smileThreshold = (smileThreshold * 1.1);
+  }
+  var clickDown = document.getElementById('down').onclick=function(){
+    smileThreshold = (smileThreshold * 0.8);
+  }
+
+
+
 
   function drawLoop() {
     requestAnimFrame(drawLoop);
@@ -90,6 +101,10 @@
     if (ctrack.getCurrentPosition()) {
       ctrack.draw(overlay);
     }
+
+
+console.log(smileThreshold);
+
     var smiles = document.getElementsByClassName('smile');
     var cp = ctrack.getCurrentParameters();
     var er = ec.meanPredict(cp);
@@ -97,7 +112,7 @@
       updateData(er);
 
       for (var i = 0;i < er.length;i++) {
-        if (er[3].value > 0.4) {
+        if (er[3].value > smileThreshold) {
           for (var j = 0; j < smiles.length; j++) {
             smiles[j].play();
           }

@@ -1,5 +1,5 @@
 body {
-  background: #d6f1f3;
+  background: #fff;
   font-family: "Averta", Arial, sans-serif;
   font-weight: normal;
   position: relative;
@@ -15,6 +15,10 @@ body {
     list-style: none; }
   body a {
     text-decoration: none; }
+
+input[type="button"]:focus {
+  border: none;
+  outline: none; }
 
 .main {
   position: relative;
@@ -32,15 +36,30 @@ body {
     /* justify-content: center; */
     /* text-align: center; */
     width: 1200px;
-    height: 75vh;
     -ms-flex-flow: row wrap;
         flex-flow: row wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
     .main .content .smile {
       margin: auto;
-      width: 25%;
+      width: 33.333%;
       height: auto; }
 
+.btm-row {
+  margin-top: 30px;
+  margin-left: -9px; }
+  .btm-row #controls {
+    display: inline-block;
+    margin-right: 20px; }
+
+.toggle-btn {
+  cursor: pointer; }
+
 .hidden {
-  height: 0; }
+  height: 0;
+  overflow: hidden; }
+
+canvas + div {
+  z-index: -1;
+  height: 0;
+  overflow: hidden; }

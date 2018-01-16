@@ -14,7 +14,7 @@
 }
 
 body {
-  background: #d6f1f3;
+  background: #fff;
   font-family: "Averta", Arial, sans-serif;
   font-weight: normal;
   position: relative;
@@ -25,6 +25,13 @@ body {
   li{list-style:none;}
   a{text-decoration:none;}
 }
+
+input[type="button"]{
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
 
 .main {
   position: relative;
@@ -43,19 +50,37 @@ body {
     /* justify-content: center; */
     /* text-align: center; */
     width: 1200px;
-    height: 75vh;
     flex-flow: row wrap;
     justify-content: space-around;
 
     .smile {
       margin: auto;
-      width: 25%;
+      width: 33.333%;
       height: auto;
     }
   }
 
 }
 
+.btm-row {
+  margin-top: 30px;
+  margin-left: -9px;
+  #controls {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+.toggle-btn {
+  cursor: pointer;
+}
+
 .hidden {
   height: 0;
+  overflow: hidden;
+}
+canvas+div {
+  z-index: -1;
+  height: 0;
+  overflow: hidden;
 }
