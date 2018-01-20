@@ -103,7 +103,7 @@
     }
 
 
-console.log(smileThreshold);
+// console.log(smileThreshold);
 
     var smiles = document.getElementsByClassName('smile');
     var cp = ctrack.getCurrentParameters();
